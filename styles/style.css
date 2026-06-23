@@ -112,7 +112,7 @@ ol {
 }
 
 .title {
-  font-family: 'Oswald' sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -131,7 +131,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: 'Oswald' sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
@@ -139,6 +139,7 @@ ol {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 200px;
 }
 
 .content__video-card-description {
@@ -231,6 +232,7 @@ ol {
 }
 
 .button {
+  height: 34px;
   border: 1px solid #fff;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
