@@ -8,8 +8,29 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .page {
   display: flex;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -34,8 +55,12 @@ html {
 }
 
 .content__list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   height: 298px;
   overflow-y: auto;
+  position: relative;
 }
 
 .content__details {
@@ -49,6 +74,7 @@ html {
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .result__video {
@@ -58,12 +84,6 @@ html {
 }
 
 .content__list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.content__list-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -92,6 +112,7 @@ html {
 }
 
 .title {
+  font-family: 'Oswald' sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -103,11 +124,14 @@ html {
 }
 
 .content__card-link {
+  display: block;
+  cursor: pointer;
   text-decoration: none;
   color: #fff;
 }
 
 .content__video-card-title {
+  font-family: 'Oswald' sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
@@ -118,6 +142,11 @@ html {
 }
 
 .content__video-card-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
   font-weight: 400;
   font-size: 18px;
   line-height: 16px;
@@ -169,6 +198,10 @@ html {
   appearance: none;
 }
 
+.search-form__textfield:focus {
+  outline: none;
+}
+
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
 }
@@ -189,17 +222,12 @@ html {
   opacity: 0;
 }
 
-.search-form__checkbox:checked .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1; 
 }
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline
-}
-
-.search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .button {
@@ -238,11 +266,6 @@ html {
   outline-offset: 1px;
 }
 
-.content__card-link {
-  display: block;
-  cursor: pointer;
-}
-
 .content__card-link:active {
   background: #545050;
 }
@@ -272,33 +295,7 @@ html {
   padding: 0 3px;
 }
 
-.result__video-container {
-  position: relative;
-}
 
-.content__list-container {
-  position: relative;
-}
-
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
 
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
